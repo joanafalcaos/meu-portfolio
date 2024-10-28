@@ -1,34 +1,45 @@
 header {
-  background-color: #222;
+  background-color: #9d7a5c;
   padding: 5px 0; 
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 100;
-  display: flex;
-  justify-content: center;
 }
 
 .navbar {
   display: flex;
-  justify-content: center;
-  width: 80%;
-  max-width: 900px;
+  align-items: center; 
+  justify-content: space-between; 
+}
+
+.logo-container {
+  margin-left: 40px; 
+}
+
+.logo {
+  height: 60px;
+  width: auto; 
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
-  gap: 20px;
-  align-items: center; 
+  gap: 50px; 
+  margin-right: 20;
+}
+
+.navbar ul li {
+  display: inline;
 }
 
 .navbar ul li a {
+  font-family:'Times New Roman', Times, serif;
   color: white;
   text-decoration: none;
-  font-size: 1.1rem;
-  padding: 3px 0; 
+  font-size: 1rem;
   transition: color 0.3s ease;
+  padding: 10px 40px; 
 }
 
 .navbar ul li a:hover {
