@@ -1,24 +1,33 @@
 /* src/components/Sobre.css */
 .sobre {
-    text-align: center;
-    padding: 50px 0;
-  }
-  
-  .profile-pic {
-    border-radius: 50%;
-    width: 120px;
-    height: 120px; 
-    object-fit: cover;
+  text-align: center;
+  padding: 50px 0;
 }
 
-  
-  h1 {
-    font-size: 2.5rem;
-    margin: 20px 0 10px;
-  }
-  
-  p {
-    font-size: 1.2rem;
-    color: #666;
-  }
-  
+.sobre-container {
+  display: flex;           /* Usar Flexbox para alinhar os itens */
+  align-items: center;    /* Alinhar verticalmente ao centro */
+  justify-content: center; /* Centralizar o conteúdo */
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 120px;  /* Ajuste o tamanho conforme necessário */
+  height: 120px; /* Ajuste o tamanho conforme necessário */
+  object-fit: cover;
+  margin-right: 20px; /* Espaçamento entre a imagem e o texto */
+}
+
+.sobre-texto {
+  text-align: left; /* Alinhar o texto à esquerda */
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 0; /* Remover margem para um melhor alinhamento */
+}
+
+p {
+  font-size: 1.2rem;
+  color: #666;
+}
