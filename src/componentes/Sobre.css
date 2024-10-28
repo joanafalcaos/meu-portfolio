@@ -1,33 +1,75 @@
-/* src/components/Sobre.css */
 .sobre {
+  padding: 50px 20px;
   text-align: center;
-  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .sobre-container {
-  display: flex;           /* Usar Flexbox para alinhar os itens */
-  align-items: center;    /* Alinhar verticalmente ao centro */
-  justify-content: center; /* Centralizar o conteúdo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
 }
+
 
 .profile-pic {
   border-radius: 50%;
-  width: 120px;  /* Ajuste o tamanho conforme necessário */
-  height: 120px; /* Ajuste o tamanho conforme necessário */
+  width: 150px;
+  height: 150px;
   object-fit: cover;
-  margin-right: 20px; /* Espaçamento entre a imagem e o texto */
-}
-
-.sobre-texto {
-  text-align: left; /* Alinhar o texto à esquerda */
+  margin-bottom: 20px;
+  order: 2;
 }
 
 h1 {
   font-size: 2.5rem;
-  margin: 0; /* Remover margem para um melhor alinhamento */
+  margin: 0;
 }
 
-p {
-  font-size: 1.2rem;
+.sobre-texto {
+  margin-top: 10px;
+  padding: 0 20px;
+}
+
+.sobre-texto p:first-of-type {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #444;
+  margin-top: 5px;
+}
+
+.sobre-texto p:nth-of-type(2) {
+  font-size: 1.1rem;
   color: #666;
+  line-height: 1.6;
+  text-align: justify;
+  margin-top: 15px;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+  .sobre-container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .sobre-texto {
+      order: 1;
+      text-align: left;
+  }
+
+  .profile-pic {
+    border-radius: 50%;
+    width: 200px; 
+    height: 200px; 
+    object-fit: cover;
+    margin-bottom: 20px;
+    order: 2; 
+}
+
 }
