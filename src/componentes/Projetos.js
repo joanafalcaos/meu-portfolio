@@ -12,19 +12,19 @@ const Projetos = () => {
       <div className="projetos-grid">
         <div className="projeto-item">
           <img src={projeto1} alt="Projeto 1" />
-          <p>Projeto de aplicativo de mobilidade</p>
+          <p>Protótipo de aplicativo de delivery</p>
         </div>
         <div className="projeto-item">
           <img src={projeto2} alt="Projeto 2" />
-          <p>Projeto de sistema de delivery</p>
+          <p>Protótipo de aplicativo de desafios saudáveis</p>
         </div>
         <div className="projeto-item">
           <img src={projeto3} alt="Projeto 3" />
-          <p>Projeto de app educacional</p>
+          <p>Aplicativo para leitura de livros</p>
         </div>
         <div className="projeto-item">
           <img src={projeto4} alt="Projeto 4" />
-          <p>Projeto de painel de controle</p>
+          <p>Protótipo de DashBoard</p>
         </div>
       </div>
     </section>
