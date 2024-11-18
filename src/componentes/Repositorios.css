@@ -1,0 +1,54 @@
+.repos-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff; 
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .repos-container h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #8b5e34; 
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .repos-container ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .repos-container li {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 1px solid #ddd; 
+    border-radius: 6px;
+    background-color: #f9f6f4; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .repos-container li:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); 
+  }
+  
+  .repos-container a {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #8b5e34; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .repos-container a:hover {
+    color: #5d3b1e; 
+  }
+  
+  .repos-container p {
+    font-size: 1rem;
+    color: #555; 
+    margin-top: 0.5rem;
+  }
+  

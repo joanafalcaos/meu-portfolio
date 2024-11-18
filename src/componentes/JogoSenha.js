@@ -1,56 +1,40 @@
 import React, { useState } from 'react';
+import './JogoSenha.css';
 
-
-function JogoSenha() {
+const JogoSenha = () => {
   const [tentativas, setTentativas] = useState([]);
-  const [entrada, setEntrada] = useState('');
-  const [senha, setSenha] = useState(generateSenha());
+  const [tentativa, setTentativa] = useState('');
+  const combinacao = [1, 2, 3, 4]; // Exemplo de combinação fixa
 
-  function generateSenha() {
-    return Math.floor(1000 + Math.random() * 9000).toString(); // Gera uma senha de 4 dígitos
-  }
-
-  function handleInputChange(event) {
-    setEntrada(event.target.value);
-  }
-
-  function handleTentativa() {
-    if (entrada.length !== 4) {
-      alert('Digite uma senha de 4 dígitos!');
-      return;
+  const handleTentativa = () => {
+    if (tentativa) {
+      setTentativas([tentativa, ...tentativas]);
+      setTentativa('');
     }
+  };
 
-    const resultado = entrada === senha ? 'Correto!' : 'Incorreto';
-    setTentativas([{ tentativa: entrada, resultado }, ...tentativas]);
-    setEntrada('');
-  }
-
-  function revelarSenha() {
-    alert(`A senha é: ${senha}`);
-  }
+  const exibirCombinacao = () => {
+    alert(`A combinação é: ${combinacao.join(' ')}`);
+  };
 
   return (
     <div className="jogo-senha">
-      <h1>Jogo da Senha</h1>
+      <h2>Jogo da Senha</h2>
       <input
         type="text"
-        value={entrada}
-        onChange={handleInputChange}
+        value={tentativa}
+        onChange={(e) => setTentativa(e.target.value)}
         placeholder="Digite sua tentativa"
-        maxLength="4"
       />
-      <button onClick={handleTentativa}>Tentar</button>
-      <button onClick={revelarSenha}>Revelar Senha</button>
-      <h2>Tentativas</h2>
+      <button onClick={handleTentativa}>Enviar</button>
+      <button onClick={exibirCombinacao}>Exibir Combinação</button>
       <ul>
-        {tentativas.map((item, index) => (
-          <li key={index}>
-            <strong>{item.tentativa}</strong>: {item.resultado}
-          </li>
+        {tentativas.map((t, index) => (
+          <li key={index}>Tentativa: {t}</li>
         ))}
       </ul>
     </div>
   );
-}
+};
 
 export default JogoSenha;
