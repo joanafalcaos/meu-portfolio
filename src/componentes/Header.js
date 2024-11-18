@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
 import logo from '../assets/imagens/logo.png'; 
 
@@ -13,6 +14,7 @@ const Header = () => {
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#competencias">Competências</a></li>
           <li><a href="#projetos">Projetos</a></li>
+          <li><Link to="/jogo-senha">Jogo da Senha</Link></li>
         </ul>
       </nav>
     </header>
