@@ -1,9 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Header.css';
-import logo from '../assets/imagens/logo.png'; 
+import logo from '../assets/imagens/logo.png';
 
 const Header = () => {
+  const navigate = useNavigate(); 
+
+  const handleNavigation = (path) => {
+    navigate(path); 
+    window.scrollTo(0, 0); 
+  };
+
   return (
     <header>
       <nav className="navbar">
@@ -11,11 +18,11 @@ const Header = () => {
           <img src={logo} alt="Logo" className="logo" />
         </div>
         <ul>
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="#competencias">Competências</a></li>
-          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#inicio" onClick={() => handleNavigation('/')}>Início</a></li>
+          <li><a href="#competencias" onClick={() => handleNavigation('/')}>Competências</a></li>
+          <li><a href="#projetos" onClick={() => handleNavigation('/')}>Projetos</a></li>
           <li><Link to="/jogo-senha">Jogo da Senha</Link></li>
-          <li><Link to="/repositorios">Repositórios</Link></li> 
+          <li><Link to="/repositorios">Repositórios</Link></li>
         </ul>
       </nav>
     </header>
